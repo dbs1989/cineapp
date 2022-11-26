@@ -1,10 +1,10 @@
 import { MagnifyingGlass } from "phosphor-react"
 import "./Search.css"
-export function Search(props){
+export function Search({setSearch}){
     return (
         <div className="search-container">
             <MagnifyingGlass className="search-icon"  size={24} color={"#F76190"}/>
-            <input type="search" placeholder="Busca"></input>
+            <input onChange={(event)=> setSearch(event.target.value)} type="search" placeholder="Busca"></input>
         </div>
     )
 }
